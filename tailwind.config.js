@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         uber: "UberMoveText",
       },
+      boxShadow: {
+        bottomSheet: "0 -6px 10px rgba(0,0,0,0.1)",
+      },
     },
   },
   plugins: [],
