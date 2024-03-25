@@ -5,7 +5,7 @@ import taxi from "@/assets/taxi.png";
 function InfoDriver(): JSX.Element {
   return (
     <div className="flex flex-row justify-between space-x-4">
-      <div className="flex flex-row items-center -space-x-6">
+      <div className="flex flex-row items-center -space-x-5">
         <div className="flex flex-col -space-y-3 z-10">
           <img
             className="w-10 h-10 border border-white shadow-md shadow-black/25 rounded-full object-cover"
@@ -18,7 +18,7 @@ function InfoDriver(): JSX.Element {
           </div>
         </div>
         <img
-          className="w-20 h-20 object-contain"
+          className="w-16 h-16 object-contain"
           src={taxi}
           alt="Juan Manuel"
         />

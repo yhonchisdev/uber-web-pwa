@@ -4,7 +4,7 @@ import InfoDriver from "@/components/start-trip/info-driver";
 import DetailDriver from "@/components/start-trip/detail-driver";
 import SlideTravels from "@/components/start-trip/slide-travels/slide";
 
-function StartTripScreen(): JSX.Element {
+function StartTrip(): JSX.Element {
   return (
     <div className="flex flex-col w-full h-full">
       <Map />
@@ -32,4 +32,4 @@ function StartTripScreen(): JSX.Element {
   );
 }
 
-export default StartTripScreen;
+export default StartTrip;
