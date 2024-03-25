@@ -4,7 +4,7 @@ import earnerIllustra from "@/assets/slides/earner-illustra.webp";
 
 function SlideDailies(): JSX.Element {
   return (
-    <div className="flex flex-row items-center space-x-4 px-4 overflow-x-auto [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
+    <div className="flex flex-row items-start space-x-4 px-4 overflow-x-auto [&::-webkit-scrollbar]:hidden snap-x snap-mandatory">
       {dailies.map((daily: DailyType, index: number): JSX.Element => {
         return <Daily key={index} daily={daily} />;
       })}

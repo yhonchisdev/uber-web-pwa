@@ -1,9 +1,19 @@
 import * as Solid from "@heroicons/react/24/solid";
+import { useNavigator } from "@/components/navigation/navigator";
 
 function WhereTo(): JSX.Element {
+  const { changeCurrent } = useNavigator();
+
+  const handleSetPointOnMap = (): void => {
+    changeCurrent(2);
+  };
+
   return (
     <div className="flex flex-row items-center justify-between space-x-4">
-      <div className="flex flex-1 items-stretch space-x-3 border-2 border-black rounded-lg px-3.5 py-2">
+      <div
+        onClick={handleSetPointOnMap}
+        className="flex flex-1 items-stretch space-x-3 border-2 border-black rounded-lg px-3.5 py-2"
+      >
         <div className="flex flex-col items-center space-y-0.5">
           <div className="flex items-center justify-center w-3 h-3 rounded-full bg-black">
             <div className="w-1 h-1 rounded-full bg-white" />

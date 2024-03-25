@@ -5,9 +5,10 @@ import car from "@/assets/car.png";
 
 type Props = {
   hiddenControls?: boolean;
-  setPoint?: boolean;
+  onBack?: () => void;
+  onBackHome?: () => void;
 };
-function GoogleMap({ hiddenControls, setPoint }: Props): JSX.Element {
+function GoogleMap({ hiddenControls, onBack, onBackHome }: Props): JSX.Element {
   const position: google.maps.LatLngLiteral = {
     lat: -13.531817043356819,
     lng: -71.96707400490665,
@@ -111,9 +112,20 @@ function GoogleMap({ hiddenControls, setPoint }: Props): JSX.Element {
           </button>
         </>
       )}
-      {setPoint && (
-        <button className="absolute top-5 left-5 z-10 flex items-center justify-center bg-white w-12 h-12 rounded-full shadow-md shadow-black/15 duration-150 active:opacity-80">
+      {onBack && (
+        <button
+          onClick={onBack}
+          className="absolute top-5 left-5 z-10 flex items-center justify-center bg-white w-12 h-12 rounded-full shadow-md shadow-black/15 duration-150 active:opacity-80"
+        >
           <Solid.ArrowLeftIcon className="w-5 h-5 text-black" />
+        </button>
+      )}
+      {onBackHome && (
+        <button
+          onClick={onBackHome}
+          className="absolute bottom-10 left-5 z-10 flex items-center justify-center bg-white w-12 h-12 rounded-full shadow-md shadow-black/15 duration-150 active:opacity-80"
+        >
+          <Solid.HomeIcon className="w-5 h-5 text-blue-500" />
         </button>
       )}
     </div>

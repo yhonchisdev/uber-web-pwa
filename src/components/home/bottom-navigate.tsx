@@ -1,6 +1,13 @@
 import * as Solid from "@heroicons/react/24/solid";
+import { useNavigator } from "@/components/navigation/navigator";
 
 function BottomNavigate(): JSX.Element {
+  const { changeCurrent } = useNavigator();
+
+  const handlePreviousTrips = (): void => {
+    changeCurrent(5);
+  };
+
   return (
     <div className="flex flex-row items-center justify-between space-x-1 bg-white border-t border-t-gray-200 px-4 pt-4 pb-6 shadow-bottomSheet shadow-black/5">
       <button className="flex flex-1 flex-col items-center justify-center duration-150 active:opacity-80">
@@ -12,7 +19,10 @@ function BottomNavigate(): JSX.Element {
         <span className="text-sm text-gray-500 font-normal">Servicios</span>
         <div className="absolute -top-1 right-9 w-3 h-3 rounded-full bg-blue-500 border-2 border-white" />
       </button>
-      <button className="flex flex-1 flex-col items-center justify-center duration-150 active:opacity-80">
+      <button
+        onClick={handlePreviousTrips}
+        className="flex flex-1 flex-col items-center justify-center duration-150 active:opacity-80"
+      >
         <Solid.BookmarkSquareIcon className="w-6 h-6 text-gray-500" />
         <span className="text-sm text-gray-500 font-normal">Actividad</span>
       </button>

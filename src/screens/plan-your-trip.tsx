@@ -3,16 +3,26 @@ import Map from "@/components/map/map";
 import WhereTo from "@/components/plan-your-trip/where-to";
 import OptionTravel from "@/components/plan-your-trip/option-travel";
 import ListAddress from "@/components/plan-your-trip/list-address";
+import { useNavigator } from "@/components/navigation/navigator";
 
 function PlanYourTrip(): JSX.Element {
+  const { changeCurrent } = useNavigator();
+
+  const handleBack = (): void => {
+    changeCurrent(0);
+  };
+
   return (
-    <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col w-full h-full animate-fadeIn">
       <Map />
-      <div className="relative z-10 flex flex-col space-y-4 bg-white max-h-[50%] rounded-t-3xl shadow-bottomSheet py-2">
+      <div className="relative z-10 flex flex-col space-y-4 bg-white max-h-[100%] rounded-t-3xl shadow-bottomSheet py-2">
         <div className="w-12 h-1 rounded-full bg-gray-100 mx-auto cursor-pointer" />
         <div className="flex flex-col space-y-4 overflow-y-auto px-4">
           <div className="flex flex-row items-center space-x-2">
-            <button>
+            <button
+              onClick={handleBack}
+              className="flex items-center justify-center w-10 h-10 rounded-full duration-150 active:bg-gray-100"
+            >
               <Solid.ArrowLeftIcon className="w-5 h-5 text-black" />
             </button>
             <h3 className="flex-1 text-lg text-black text-center font-semibold">

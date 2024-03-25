@@ -5,7 +5,7 @@ import Suggestion, { SuggestionType } from "@/components/home/suggestion";
 
 function ListSuggestions(): JSX.Element {
   return (
-    <div className="flex flex-row items-center space-x-4 overflow-x-auto px-4">
+    <div className="flex flex-row items-center space-x-4 px-4">
       {listSuggestions.map(
         (suggestion: SuggestionType, index: number): JSX.Element => {
           return <Suggestion key={index} suggestion={suggestion} />;

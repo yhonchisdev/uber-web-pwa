@@ -5,7 +5,7 @@ import BottomNavigate from "@/components/previous-trips/bottom-navigate";
 
 function PreviousTrips(): JSX.Element {
   return (
-    <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col w-full h-full animate-fadeIn">
       <div className="flex flex-1 flex-col space-y-4 overflow-y-auto py-6">
         <div className="flex flex-col space-y-5 px-4">
           <h3 className="text-3xl text-black font-semibold">Actividad</h3>

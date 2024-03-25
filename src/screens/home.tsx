@@ -3,10 +3,12 @@ import BottomNavigate from "@/components/home/bottom-navigate";
 import ListLocations from "@/components/home/list-locations";
 import ListSuggestions from "@/components/home/list-suggestions";
 import SlideDailies from "@/components/home/slide-dailies/slide";
+import SlideTranslates from "@/components/home/slide-translates/slide";
+import SlideWaysToUse from "@/components/home/slide-ways-to-use/slide";
 
 function Home(): JSX.Element {
   return (
-    <div className="flex flex-col w-full h-full">
+    <div className="flex flex-col w-full h-full animate-fadeIn">
       <div className="flex flex-1 flex-col space-y-6 overflow-y-auto py-6">
         <div className="flex flex-col space-y-5 px-4">
           <h3 className="text-3xl text-black font-medium">Uber</h3>
@@ -29,6 +31,22 @@ function Home(): JSX.Element {
             </h4>
           </div>
           <SlideDailies />
+        </div>
+        <div className="flex flex-col space-y-3">
+          <div className="flex flex-row items-center justify-between space-x-2 px-4">
+            <h4 className="text-lg text-black font-semibold">
+              Traslados diarios más eficientes
+            </h4>
+          </div>
+          <SlideTranslates />
+        </div>
+        <div className="flex flex-col space-y-3">
+          <div className="flex flex-row items-center justify-between space-x-2 px-4">
+            <h4 className="text-lg text-black font-semibold">
+              Más maneras de usar Uber
+            </h4>
+          </div>
+          <SlideWaysToUse />
         </div>
       </div>
       <BottomNavigate />
